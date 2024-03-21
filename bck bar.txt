@@ -1,0 +1,50 @@
+                        <div class="bar-3">
+                            <div class="coluna-bar-01">
+                                <div class="avancado-1">
+                                    <h2>Valor</h2>
+                                    <div class="input-avan1">
+                                        <span>R$</span>
+                                        <input class="input-avancados" type="number" name="" id="">
+                                        <span>R$</span>
+                                        <input class="input-avancados" type="number" name="" id="">
+                                    </div><!--input-avan1-->
+                                </div><!--avancado-1-->
+                                <div class="avancado-2">
+                                    <h2>Área do Imóvel</h2>
+                                    <div class="input-avan2">
+                                        <span>m²</span>
+                                        <input class="input-avancados" type="number" name="" id="">
+                                        <span>m²</span>
+                                        <input class="input-avancados" type="number" name="" id="">
+                                    </div><!--input-avan2-->
+                                </div><!--avancado-2-->
+                            </div>
+                            <div class="coluna-bar-02">
+                                <div class="avancado-3">
+                                    <h2>Dormitórios</h2>
+                                    <div class="input-radio-dormitorio">
+                                        <input type="radio" name="dormitorios-qnt" id="p1-dormitorios-1" value="1">
+                                        <label name="p1-dormitorios" for="p1-dormitorios-1"><h4>1</h4></label>
+                                        <input type="radio" name="dormitorios-qnt" id="p2-dormitorios-2" value="2">
+                                        <label name="p1-dormitorios" for="p2-dormitorios-2"><h4>2</h4></label>
+                                        <input type="radio" name="dormitorios-qnt" id="p3-dormitorios-3" value="3">
+                                        <label name="p1-dormitorios" for="p3-dormitorios-3"><h4>3</h4></label>
+                                        <input type="radio" name="dormitorios-qnt" id="p4-dormitorios-4" value="4">
+                                        <label name="p1-dormitorios" for="p4-dormitorios-4"><h4>4+</h4></label>
+                                    </div><!--input-radio-dormitorio-->
+                                </div><!--avancado-3-->
+                                <div class="avancado-4">
+                                    <h2>Vagas</h2>
+                                    <div class="input-radio-vagas">
+                                        <input type="radio" name="vagas-qnt" id="p1-vagas-1" value="1">
+                                        <label name="p1-vagas" for="p1-vagas-1"><h4>1</h4></label>
+                                        <input type="radio" name="vagas-qnt" id="p1-vagas-2" value="2">
+                                        <label name="p1-vagas" for="p1-vagas-2"><h4>2</h4></label>
+                                        <input type="radio" name="vagas-qnt" id="p1-vagas-3" value="3">
+                                        <label name="p1-vagas" for="p1-vagas-3"><h4>3</h4></label>
+                                        <input type="radio" name="vagas-qnt" id="p1-vagas-4" value="4">
+                                        <label name="p1-vagas" for="p1-vagas-4"><h4>4+</h4></label>
+                                    </div><!--input-radio-vagas-->
+                                </div><!--avancado-4-->  
+                            </div>
+                        </div><!--bar-3-->
