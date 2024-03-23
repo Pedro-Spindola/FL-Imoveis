@@ -5,7 +5,7 @@
     font-family: 'Anek Latin', sans-serif;
 }
 :root{
-    --color-principal: rgb(8, 34, 88);
+    --color-principal: rgb(14, 33, 73);
     --color-secundaria: rgb(222,178,100);
     --color-grey: rgb(220,220,220);
     --color-grey-input: rgb(235,235,235);
@@ -28,92 +28,111 @@
 .navegation{
     background-color: var(--color-principal);
     height: 90px;
+    width: 100%;
+}
+.navegation .container{
+    height: 90px;
 }
 .nav-1{
-    width: 10%;
-    /*border: 2px solid blue;*/
-    align-self: center;
+    display: flex;
+    border: 2px solid red;
+    display: flex;
+    width: 15%;
+    height: 100%;
+    justify-content: center;
+    
 }
 .nav-1 img{
-    width: 100%;
-    max-width: 80px;
-    max-height: 80px;
-    padding: 0px;
+    border: 2px solid blue;
+    height: 100%;
 }
 .nav-menu{
     display: flex;
-    /*border: 2px solid red;*/
-    margin: auto;
-    width: 90%;
-    height: 90px;
+    border: 2px solid blue;
+    display: flex;
+    width: 85%;
+    height: 100%;
 }
 .nav-2{
     display: flex;
-    width: 90%;
-}
-.nav-2 ul{
-    display: flex;
-    /*border: 2px solid rgb(137, 47, 255);*/
     width: 100%;
-    align-items: center;
-    align-self: center;
     justify-content: end;
+    align-items: center;
+    padding-right: 20px;
+    
 }
 .nav-2 li{
-    /*border: 2px solid green;*/
     list-style: none;
-    margin-right: 6%;
 }
 .nav-2 a{
     text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
+    color: var(--color-white);
+    font-weight: 400;
+    margin-right: 80px;
 }
 .nav-2 a:hover{
-    border-bottom: 2px solid var(--color-secundaria);
-    border-radius: 2px;
+    color: var(--color-secundaria);
 }
-.nav-3{
-    /*border: 2px solid cyan;*/
-    margin: auto;
-    width: 10%;
-}
-.nav-3 img{
+.nav-2 img{
+    height: 28px;
     width: 28px;
+    display: none;
     cursor: pointer;
-    color: #ffffff;
+    border: 2px solid rgb(255, 217, 0);
 }
-
+.nav-mobile{
+display: none;
+}
 /*  --- Section Home ---   */
 
-.home-page{
-    width: 100%;
-    height: 500px;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: rgb(0, 0, 0);
-    background-image: url(../image/background_one.jpg);
-}
-.home-search{
-    width: 100%;
-    height: 100%;
-    padding-top: 160px;
-    padding-bottom: 20px;
-}
-.search-bar-main{
-    margin: auto;
-    width: 800px;
-    background-color: var(--color-white);
-    padding: 20px;
-    border-radius: 22px;
-    box-shadow: 2px 2px 4px rgb(40, 42, 44), -2px -2px 4px rgb(75, 82, 90);
-}
+/*****Respansivo*****/
 
-/*  --- Section Descricao ---   */
+@media screen and (max-width: 999px)
+{
 
-.box-descricao{
-    width: 100%;
-    min-height: 200px;
+}
+@media screen and (max-width: 768px)
+{
+    .nav-1{
+        width: 40%;
+    }
+    .nav-menu{
+        width: 60%;
+    }
+    .nav-2 li{
+        list-style: none;
+        display: none;
+    }
+    .nav-2 img{
+        display: flex;
+    }
+    .nav-mobile {
+        display: block;
+        background-color: var(--color-principal);
+        position: absolute;
+        right: 0;
+        top: 100px;
+        width: 210px;
+        height: 0%;
+        align-content: top;
+        transition: height .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .nav-mobile.open {
+        height: 100%;
+    }
+    
+    .nav-mobile li{
+        display: flex;
+        height: 80px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+    }
+    .nav-mobile a{
+        text-decoration: none;
+        color: var(--color-white);
+        font-weight: 400;
+    }
+
 }
