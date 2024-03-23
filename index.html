@@ -39,9 +39,109 @@
                     <li><a href="">Anuncia seu Imóvel</a></li>
                     <li><a href="">Sobre</a></li>
                 </div><!--nav-mobile-->
-        </div><!--container-->
+            </div><!--container-->
         </nav><!--navegation-->
     </header>
+    <main>
+        <section class="principal">
+            <div class="container"> 
+                <div class="box-bar-main">
+                    <div class="box-bar-pesquisa">
+                        <div class="box-select1">
+                            <div class="box-sel-preten">
+                                <label class="pretencao1">Pretenção:</label>
+                                <label class="pretencao2">Todos</label>
+                            </div><!--box-sel-preten-->
+                            <div class="box-sel-preten-drop">
+                                <label for="comprar-p">
+                                    <input type="radio" id="comprar-p" name="pretencao" value="Comprar">
+                                    <h4>Comprar</h4>
+                                </label>
+                                <label for="alugar-p">
+                                    <input type="radio" id="alugar-p" name="pretencao" value="Alugar">
+                                    <h4>Alugar</h4>
+                                </label>
+                                <label for="novos-p">
+                                    <input type="radio" id="novos-p" name="pretencao" value="Novos">
+                                    <h4>Novos</h4>
+                                </label>
+                            </div><!--box-sel-preten-drop-->
+                        </div><!--box-select1-->
+                        <div class="box-select2">
+                            <div class="box-sel-tipos">
+                                <label class="tipos1">Tipos:</label>
+                                <label class="tipos2">Todos</label>
+                            </div><!--box-sel-tipos-->
+                            <div class="box-sel-tipos-drop">
+                                <label for="apartamento-t">
+                                    <input type="radio" id="apartamento-t" name="tipos" value="Apartamento">
+                                    <h4>Apartamento</h4>
+                                </label>
+                                <label for="casa-t">
+                                    <input type="radio" id="casa-t" name="tipos" value="Casa">
+                                    <h4>Casa</h4>
+                                </label>
+                                <label for="chacara-t">
+                                    <input type="radio" id="chacara-t" name="tipos" value="Chácara">
+                                    <h4>Chácara</h4>
+                                </label>
+                                <label for="flat-t">
+                                    <input type="radio" id="flat-t" name="tipos" value="Flat">
+                                    <h4>Flat</h4>
+                                </label>
+                                <label for="sobrado-t">
+                                    <input type="radio" id="sobrado-t" name="tipos" value="Sobrado">
+                                    <h4>Sobrado</h4>
+                                </label>
+                                <label for="terreno-t">
+                                    <input type="radio" id="terrno-t" name="tipos" value="Terreno">
+                                    <h4>Terreno</h4>
+                                </label>
+                            </div><!--box-sel-tipos-drop-->
+                        </div><!--box-select2-->
+                        <input class="bar-pesquisar" type="text" id="bar-pesquisar" placeholder="Busque o nome de cidade ou bairro...">
+                        <button class="btn-buscar" id="btn-buscar">BUSCAR</button>
+                        <button class="btn-filtros" id="btn-filtros">FILTROS</button>
+                    </div><!--box-bar-pesquisa-->
+                    <div class="box-bar-filtros">
+                        <div class="box-filtros box-1-filtros">
+                            <h2>VALOR</h2>
+                            <label for="minValue">R$</label>
+                            <input type="text" id="minValue" name="minValue" pattern="[0-9]*" placeholder="Valor mínimo">
+                            <label for="maxValue">R$</label>
+                            <input type="text" id="maxValue" name="maxValue" pattern="[0-9]*" placeholder="Valor máximo">
+                        </div><!--box-filtros-->
+                        <div class="box-filtros box-2-filtros">
+                            <h2>DORMITÓRIOS</h2>
+                            <label for="opcao1-dormitorios"><input type="radio" id="opcao1-dormitorios" name="dormitorios" value="1" checked>1</label><br>
+                            <label for="opcao2-dormitorios"><input type="radio" id="opcao2-dormitorios" name="dormitorios" value="2">2</label><br>
+                            <label for="opcao3-dormitorios"><input type="radio" id="opcao3-dormitorios" name="dormitorios" value="3">3</label><br>
+                            <label for="opcao4-dormitorios"><input type="radio" id="opcao4-dormitorios" name="dormitorios" value="4">+4</label><br>
+                        </div><!--box-filtros-->
+                        <div class="box-filtros box-3-filtros">
+                            <h2>ÁREA DO IMÓVEL</h2>
+                            <label for="minValue">m²</label>
+                            <input type="text" id="minValue" name="minValue" pattern="[0-9]*" placeholder="0,00">
+                            <label for="maxValue">m²</label>
+                            <input type="text" id="maxValue" name="maxValue" pattern="[0-9]*" placeholder="0,00">
+                        </div><!--box-filtros-->
+                        <div class="box-filtros box-4-filtros">
+                            <h2>VAGAS</h2>
+                            <label for="opcao1-vagas"><input type="radio" id="opcao1-vagas" name="vagas" value="1" checked>1</label><br>
+                            <label for="opcao2-vagas"><input type="radio" id="opcao2-vagas" name="vagas" value="2">2</label><br>
+                            <label for="opcao3-vagas"><input type="radio" id="opcao3-vagas" name="vagas" value="3">3</label><br>
+                            <label for="opcao4-vagas"><input type="radio" id="opcao4-vagas" name="vagas" value="4">+4</label><br>
+                        </div><!--box-filtros-->
+                    </div><!--box-bar-filtros-->
+                </div><!--box-bar-main-->
+            </div><!--container-->
+        </section><!--principal-->
+        <section class="lineTexto">
+            <div class="container">
+
+            </div><!--container-->
+        </section><!--lineTexto-->
+    </main>
 </body>
 <script src="js/main.js"></script>
 </html>
