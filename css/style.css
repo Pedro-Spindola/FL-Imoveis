@@ -18,7 +18,7 @@
     padding:0 2%;
     margin:0 auto;
     flex-wrap: wrap;
-    border: 2px solid rgb(30, 255, 0);
+    /*border: 2px solid rgb(30, 255, 0);*/
 }
 .line-color{
     width: 100%;
@@ -35,7 +35,7 @@
 }
 .nav-1{
     display: flex;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     display: flex;
     width: 15%;
     height: 100%;
@@ -43,12 +43,12 @@
     
 }
 .nav-1 img{
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
     height: 100%;
 }
 .nav-menu{
     display: flex;
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
     display: flex;
     width: 85%;
     height: 100%;
@@ -78,7 +78,7 @@
     width: 28px;
     display: none;
     cursor: pointer;
-    border: 2px solid rgb(255, 217, 0);
+    /*border: 2px solid rgb(255, 217, 0);*/
 }
 .nav-mobile{
 display: none;
@@ -120,7 +120,7 @@ display: none;
     .nav-mobile.open {
         height: 100%;
     }
-    
+
     .nav-mobile li{
         display: flex;
         height: 80px;
