@@ -70,7 +70,7 @@ document.addEventListener("click", function(event) {
         box2.classList.remove('open');
     }
 });
-
+// Evento que vai colocar o texto escolhido no label e fechar a label de escolha após a escolha do atributo.
 radiosPretencao.forEach(function(radio) {
     radio.addEventListener('change', function() {
         if (this.checked) {
@@ -79,7 +79,7 @@ radiosPretencao.forEach(function(radio) {
         }
     });
 });
-
+// Evento que vai colocar o texto escolhido no label e fechar a label de escolha após a escolha do atributo.
 radiosTipos.forEach(function(radio) {
     radio.addEventListener('change', function() {
         if (this.checked) {

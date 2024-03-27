@@ -100,6 +100,7 @@ display: none;
     background-size: cover;
     background-position: center;
     margin-top: 100px;
+    margin-bottom: -30px;
     height: calc(100vh - 100px);
     z-index: 1;
 }
@@ -263,10 +264,6 @@ display: none;
 .box-2-filtros, .box-4-filtros{
     display: flex;
 }
-/*  --- Section LineTexto ---   */
-.lineTexto{
-    height: 400px;
-}
 .box-2-filtros label, .box-4-filtros label{
     background-color: var(--color-grey);
     cursor: pointer;
@@ -287,7 +284,128 @@ display: none;
     margin-left: 18px;
 }
 
-/*****Respansivo*****/
+/*  --- Section LineTexto ---   */
+
+.lineTexto{
+    height: 150px;
+}
+.lineTexto .container{
+    height: 100%;
+    max-width: none;
+    padding:0;
+}
+.line-transition1{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, transparent, var(--color-principal), transparent) 1;
+}
+.line-transition2{
+    width: 100%;
+    height: 40px;
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(to right, transparent, var(--color-principal), transparent) 1;
+}
+.textReferencePrincipal {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textReferencePrincipal h2{
+    font-size: 18px;
+    text-align: center;
+}
+
+/*  --- Footer ---   */
+
+footer{
+    width: 100%;
+}
+footer .container{
+    height: 240px;
+    width: 100%;
+    max-width: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-principal);
+    border-top: 10px solid var(--color-secundaria);
+}
+.informacao-footer-box1, .informacao-footer-box2, .informacao-footer-box3{
+    width: 30%;
+    height: 180px;
+    display: flex;
+    margin: 20px 0px;
+    flex-direction: column;
+    justify-content: start;
+}
+.informacao-footer-box1 img{
+    width: 110px;
+}
+.informacao-footer-box1 li{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: start;
+    padding: 2px 0px;
+    list-style: none;
+    text-align: start;
+    letter-spacing: 1px;
+    color: var(--color-white);
+}
+.informacao-footer-box2 li{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: start;
+    padding: 6px 0px;
+    text-align: start;
+    list-style: square inside;
+    color: var(--color-secundaria);
+}
+.informacao-footer-box2 a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: var(--color-white);
+}
+.informacao-footer-box2 h1{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-white);
+}
+.informacao-footer-box3 h1{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    height: 28px;
+    color: var(--color-white);
+}
+.informacao-footer-box3 img{
+    width: 40px;
+}
+.direitos{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-principal);
+    border-top: 2px solid var(--color-secundaria);
+}
+.direitos h2{
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+/*  --- Respansivo ---   */
+
 @media screen and (min-width: 1366px)
 {
     .container{
@@ -397,5 +515,32 @@ display: none;
     }
     .box-filtros{
         margin-top: 10px;
+    }
+    footer .container{
+        display: block;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .informacao-footer-box1, .informacao-footer-box2, .informacao-footer-box3{
+        width: 100%;
+        margin: 0px 0px;
+        justify-content: center;
+        align-items: center;
+    }
+    .informacao-footer-box1 li{
+        text-align: center;
+    }
+    .informacao-footer-box2 li{
+        text-align: center;
+    }
+    .informacao-footer-box2 h1{
+        text-align: center;
+        margin-bottom: 12px;
+        margin-top: 40px;
+    }
+    .informacao-footer-box3 h1{
+        text-align: center;
+        margin-bottom: 12px;
     }
 }

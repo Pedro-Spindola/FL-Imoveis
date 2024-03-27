@@ -1,0 +1,1 @@
+- Verificar o tamanho da fonte na lineTexto no mobile.
