@@ -42,7 +42,7 @@ pretencao.addEventListener("click" ,function(){
 });
 
 tipos.addEventListener("click" ,function(){
-     // Verifica se a classe .open já está presente na div
+    // Verifica se a classe .open já está presente na div
     const isOpen = box2.classList.contains('open');
 
     // Se a classe .open já estiver presente, remove-a; caso contrário, adiciona-a
@@ -75,6 +75,7 @@ radiosPretencao.forEach(function(radio) {
     radio.addEventListener('change', function() {
         if (this.checked) {
             labelPretencaoTexto.textContent = this.value;
+            box1.classList.remove('open');
         }
     });
 });
@@ -83,6 +84,79 @@ radiosTipos.forEach(function(radio) {
     radio.addEventListener('change', function() {
         if (this.checked) {
             labelTiposTexto.textContent = this.value;
+            box2.classList.remove('open');
         }
     });
+});
+
+const sliderFiltro = document.querySelector('.box-bar-filtros');
+const btnFiltros = document.getElementById('btn-filtros');
+
+btnFiltros.addEventListener("click", function(){
+    // Verifica se a classe .open já está presente na div
+    const Open = sliderFiltro.classList.contains('open');
+
+    // Se a classe .open já estiver presente, remove-a; caso contrário, adiciona-a
+    if (Open) {
+        sliderFiltro.classList.remove('open');
+    } else {
+        sliderFiltro.classList.add('open');
+    }
+});
+
+
+const radiosDormitorios = document.querySelectorAll('.box-2-filtros input[type="radio"]');
+
+// Adiciona um event listener para cada botão de rádio
+radiosDormitorios.forEach(radio => {
+    radio.addEventListener('change', function() {
+        // Remove a classe 'checked' de todos os rótulos
+        document.querySelectorAll('.box-2-filtros label').forEach(label => {
+            label.classList.remove('checked');
+        });
+        // Adiciona a classe 'checked' ao rótulo do botão de rádio selecionado
+        if (this.checked) {
+            this.parentNode.classList.add('checked');
+        }
+    });
+});
+
+const radiosVagas = document.querySelectorAll('.box-4-filtros input[type="radio"]');
+
+// Adiciona um event listener para cada botão de rádio
+radiosVagas.forEach(radio => {
+    radio.addEventListener('change', function() {
+        // Remove a classe 'checked' de todos os rótulos
+        document.querySelectorAll('.box-4-filtros label').forEach(label => {
+            label.classList.remove('checked');
+        });
+        // Adiciona a classe 'checked' ao rótulo do botão de rádio selecionado
+        if (this.checked) {
+            this.parentNode.classList.add('checked');
+        }
+    });
+});
+
+// Seleciona os campos de entrada
+const minValor = document.getElementById('minValueValor');
+const maxValor = document.getElementById('maxValueValor');
+const minArea = document.getElementById('minValueArea');
+const maxArea = document.getElementById('maxValueArea');
+
+// Adiciona um event listener para interceptar a entrada do usuário
+minValor.addEventListener('input', function() {
+    this.value = this.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+});
+
+maxValor.addEventListener('input', function() {
+    this.value = this.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+});
+
+// Adiciona um event listener para interceptar a entrada do usuário
+minArea.addEventListener('input', function() {
+    this.value = this.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+});
+
+maxArea.addEventListener('input', function() {
+    this.value = this.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
 });
