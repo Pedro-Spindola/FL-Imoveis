@@ -318,6 +318,108 @@ display: none;
     text-align: center;
 }
 
+/*  --- Grid ---   */
+.text-motivacao{
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 2px;
+    width: 100%;
+}
+.text-motivacao h2{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.text-motivacao h3{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+.container-lancamentos, .container-destaques{
+    margin-top: 20px;
+    width: 100%;
+}
+.container-lancamentos h2, .container-destaques h2{
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    width: 100%;
+    padding: 10px 0px;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, var(--color-principal), transparent) 1;
+}
+.box-grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0px;
+}
+.box-imovel{
+    background-color: var(--color-grey);
+    width: 300px;
+    height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.box-imovel-imagem{
+    height: 220px;
+    background-image: url('../image/background_01.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.box-imovel-informacao{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    padding: 10px 20px;
+}
+.imovel-div-infomacao{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+}
+.imovel-div-infomacao .imovel-tipo{
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.imovel-div-infomacao .imovel-valor{
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 14px 0px;
+}
+.imovel-div-infomacao .imovel-endereco{
+    font-size: 12px;
+    font-weight: 500;
+}
+.imovel-div-infomacao .imovel-setor{
+    font-size: 12px;
+    font-weight: 500;
+}
+.imovel-div-icones{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+}
+.box-icone{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.box-icone h5{
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 12px;
+}
+.box-imovel-informacao .icones{
+    width: 20px;
+}
+
 /*  --- Footer ---   */
 
 footer{
@@ -332,6 +434,7 @@ footer .container{
     align-items: center;
     background-color: var(--color-principal);
     border-top: 10px solid var(--color-secundaria);
+    margin-top: 60px;
 }
 .informacao-footer-box1, .informacao-footer-box2, .informacao-footer-box3{
     width: 30%;
@@ -384,8 +487,13 @@ footer .container{
     height: 28px;
     color: var(--color-white);
 }
+.icon-redes-social{
+    display: flex;
+    justify-content: start;
+}
 .informacao-footer-box3 img{
     width: 40px;
+    margin: 10px;
 }
 .direitos{
     width: 100%;
@@ -415,6 +523,9 @@ footer .container{
 
 @media screen and (max-width: 999px)
 {
+
+    /*  --- Section Principal ---   */
+
     .box-bar-main{
         width: 740px;
     }
@@ -437,6 +548,9 @@ footer .container{
 }
 @media screen and (max-width: 768px)
 {
+
+    /*  --- Section Principal ---   */
+
     .nav-1{
         width: 40%;
     }
@@ -516,6 +630,15 @@ footer .container{
     .box-filtros{
         margin-top: 10px;
     }
+
+    /*  --- Section LineTexto ---   */
+
+    .textReferencePrincipal h2{
+        font-size: 14px;
+    }
+
+    /*  --- Footer ---   */
+
     footer .container{
         display: block;
         height: auto;
@@ -532,6 +655,7 @@ footer .container{
         text-align: center;
     }
     .informacao-footer-box2 li{
+        list-style: none;
         text-align: center;
     }
     .informacao-footer-box2 h1{
@@ -539,8 +663,16 @@ footer .container{
         margin-bottom: 12px;
         margin-top: 40px;
     }
+    .informacao-footer-box2 a{
+        text-decoration: none;
+        letter-spacing: 1px;
+        color: var(--color-white);
+    }
     .informacao-footer-box3 h1{
         text-align: center;
         margin-bottom: 12px;
+    }
+    .icon-redes-social{
+        justify-content: center;
     }
 }
