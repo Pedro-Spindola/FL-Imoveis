@@ -7,9 +7,10 @@
 :root{
     --color-principal: rgb(14, 33, 73);
     --color-secundaria: rgb(222,178,100);
-    --color-grey: rgb(220,220,220);
-    --color-grey-input: rgb(235,235,235);
+    --color-grey: rgb(240,240,240);
+    --color-grey-input: rgb(230,230,230);
     --color-white: rgb(255, 255, 255);
+    --color-black: rgb(0, 0, 0);
 }
 .container
 {
@@ -25,6 +26,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 999;
 }
 .line-color{
     width: 100%;
@@ -35,7 +37,6 @@ header{
     background-color: var(--color-principal);
     height: 90px;
     width: 100%;
-    z-index: 999;
     box-shadow: 0px 2px 10px black
 }
 .navegation .container{
@@ -287,7 +288,7 @@ display: none;
 /*  --- Section LineTexto ---   */
 
 .lineTexto{
-    height: 150px;
+    height: 200px;
 }
 .lineTexto .container{
     height: 100%;
@@ -317,14 +318,21 @@ display: none;
     font-size: 18px;
     text-align: center;
 }
-
-/*  --- Grid ---   */
 .text-motivacao{
     display: flex;
     flex-direction: column;
     letter-spacing: 2px;
+    height: 40px;
     width: 100%;
+    margin-bottom: 10px;
 }
+
+/*  --- Grid ---   */
+
+.section-grid .container{
+    display: block;
+}
+
 .text-motivacao h2{
     width: 100%;
     font-size: 20px;
@@ -352,17 +360,18 @@ display: none;
 }
 .box-grid-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 40px 20px;
     margin: 20px 0px;
 }
 .box-imovel{
     background-color: var(--color-grey);
-    width: 300px;
+    width: 270px;
     height: 420px;
     border-radius: 20px;
     overflow: hidden;
     margin: 0 auto;
+    border: 1px solid var(--color-grey-input);
 }
 .box-imovel-imagem{
     height: 220px;
@@ -419,6 +428,43 @@ display: none;
 .box-imovel-informacao .icones{
     width: 20px;
 }
+
+/*  --- Slick Slider ---   */
+
+.slick-dotted ul{
+    display: block;
+	list-style-type: none;
+	text-align: center;
+	position: relative;
+	top:30px;
+}
+
+.slick-dotted li{
+	display: inline-block;
+	margin: 0 7px;
+}
+
+.slick-dotted button:focus{
+	outline: 0;
+}
+
+.slick-dotted li button{
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	color: var(--color-grey-input);
+	border-width: 0;
+	background: var(--color-grey-input);
+	opacity: 1;
+	cursor: pointer;
+}
+
+li.slick-active button{
+	background: var(--color-principal);
+	color: var(--color-principal);
+}
+
+.slick-slide:focus { outline: none; }
 
 /*  --- Footer ---   */
 
@@ -514,7 +560,7 @@ footer .container{
 
 /*  --- Respansivo ---   */
 
-@media screen and (min-width: 1366px)
+@media screen and (min-width: 1367px)
 {
     .container{
         max-width: 1800px;
