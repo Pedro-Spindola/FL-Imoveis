@@ -294,6 +294,8 @@ display: none;
     height: 100%;
     max-width: none;
     padding:0;
+    justify-content: center;
+    align-items: center;
 }
 .line-transition1{
     width: 100%;
@@ -308,7 +310,7 @@ display: none;
     border-image: linear-gradient(to right, transparent, var(--color-principal), transparent) 1;
 }
 .textReferencePrincipal {
-    width: 100%;
+    width: 90%;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -316,6 +318,7 @@ display: none;
 }
 .textReferencePrincipal h2{
     font-size: 18px;
+    font-weight: 600;
     text-align: center;
 }
 .text-motivacao{
@@ -323,8 +326,20 @@ display: none;
     flex-direction: column;
     letter-spacing: 2px;
     height: 40px;
-    width: 100%;
+    width: 90%;
     margin-bottom: 10px;
+}
+.text-motivacao h2{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+.text-motivacao h3{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
 }
 
 /*  --- Grid ---   */
@@ -333,18 +348,6 @@ display: none;
     display: block;
 }
 
-.text-motivacao h2{
-    width: 100%;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-}
-.text-motivacao h3{
-    width: 100%;
-    font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-}
 .container-lancamentos, .container-destaques{
     margin-top: 20px;
     width: 100%;
@@ -362,7 +365,7 @@ display: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 40px 20px;
-    margin: 20px 0px;
+    margin: 40px 0px;
 }
 .box-imovel{
     background-color: var(--color-grey);
@@ -374,10 +377,15 @@ display: none;
     border: 1px solid var(--color-grey-input);
 }
 .box-imovel-imagem{
+    overflow: hidden;
     height: 220px;
-    background-image: url('../image/background_01.jpg');
     background-size: cover;
     background-position: center;
+}
+.imovel-imagem{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .box-imovel-informacao{
     display: flex;
@@ -640,14 +648,14 @@ footer .container{
     }
     .box-bar-main{
         margin-top: 80px;
-        width: 100%;
+        width: 90%;
     }
     .box-bar-pesquisa{
         height: auto;
         padding-bottom: 10px;
     }
     .box-bar-pesquisa *{
-        width: 90%;
+        width: 100%;
     }
     .box-select2, .box-select1{
         margin-top: 0px;
@@ -664,7 +672,7 @@ footer .container{
         padding-left: 0;
     }
     .box-bar-filtros *{
-        width: 90%;
+        width: 100%;
     }
     .box-1-filtros label, .box-3-filtros label{
         margin-right: 0px;
@@ -681,6 +689,25 @@ footer .container{
 
     .textReferencePrincipal h2{
         font-size: 14px;
+    }
+    
+    /*  --- Section Grid ---   */
+
+    .slick-dotted li button{
+        width: 10px;
+        height: 10px;
+        border-radius: 8px;
+        color: var(--color-grey-input);
+        border-width: 0;
+        background: var(--color-grey-input);
+        opacity: 1;
+        cursor: pointer;
+        font-size: 8px;
+    }
+    
+    li.slick-active button{
+        background: var(--color-principal);
+        color: var(--color-principal);
     }
 
     /*  --- Footer ---   */
