@@ -665,8 +665,8 @@ footer .container{
         align-items: start;
     }
     .box-sel-preten-drop label, .box-sel-tipos-drop label{
-        width: 60%;
-        padding: 0px;
+        width: 100%;
+        padding: 0px 0px 0px 10px;
     }
     .box-sel-preten-drop h4, .box-sel-tipos-drop h4{
         padding-left: 0;

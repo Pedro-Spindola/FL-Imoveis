@@ -1,3 +1,5 @@
+// --- --- PAGINA INDEX --- ---
+
 // Seleciona a imagem dentro da lista com a classe .nav-2
 const imgBars = document.querySelector('.nav-2 img');
 
