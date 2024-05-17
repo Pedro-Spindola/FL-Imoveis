@@ -327,7 +327,7 @@ display: none;
     letter-spacing: 2px;
     height: 40px;
     width: 90%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .text-motivacao h2{
     width: 100%;
@@ -375,6 +375,7 @@ display: none;
     overflow: hidden;
     margin: 0 auto;
     border: 1px solid var(--color-grey-input);
+    cursor: pointer;
 }
 .box-imovel-imagem{
     overflow: hidden;
@@ -598,6 +599,15 @@ footer .container{
     }
     .btn-buscar, .btn-filtros{
         width: calc(25% - 5px);
+    }
+    .text-motivacao{
+        font-size: 12px;
+    }
+    .text-motivacao h3{
+        padding-bottom: 20px;
+    }
+    .text-motivacao h2, .text-motivacao h3{
+        font-size: 14px;
     }
 }
 @media screen and (max-width: 768px)
