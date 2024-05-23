@@ -1,0 +1,15 @@
+{
+  "name": "fl-imoveis",
+  "version": "1.0.0",
+  "description": "API fl-imoveis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pedro Spindola",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0"
+  }
+}
