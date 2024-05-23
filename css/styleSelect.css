@@ -93,49 +93,25 @@ header{
 display: none;
 }
 /*  --- Principal ---   */
-.slider-box-imagem {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
+.principal{
+    margin-top: 100px;
+}
+.slider-box-imagem{
+    height: 400px;
+    width: 100vw;
     overflow: hidden;
-    border: 2px solid #ddd;
-    border-radius: 10px;
+    max-height: 400px;
 }
 .box-imagens-imovel{
     display: flex;
-    margin-top: 100px;
-    width: calc(100vw * 3);
-    max-height: 400px;
-    overflow: hidden;
-    transition: transform 0.5s ease-in-out;
+    transform: translate 0.5s ease-in-out;
+    transform: translateX(0);
 }
 .box-imagens-imovel img{
     width: calc(100vw / 3);
     height: auto;
     object-fit: cover;
     object-position: center;
-}
-
-.prev, .next {
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-button.prev {
-    left: 10px;
-}
-
-button.next {
-    right: 10px;
 }
 
 .informacaoes{
@@ -326,7 +302,9 @@ footer .container{
 
 @media screen and (max-width: 999px)
 {
-
+    .box-imagens-imovel img{
+        width: calc(100vw / 2);
+    }
 }
 
 @media screen and (max-width: 768px)
@@ -376,6 +354,12 @@ footer .container{
         font-weight: 400;
     }
 
+    /*  --- Principal --- */
+
+    .box-imagens-imovel img{
+        width: 100vw;
+    }
+
     /*  --- Footer ---   */
 
     footer .container{
@@ -414,18 +398,5 @@ footer .container{
     .icon-redes-social{
         justify-content: center;
     }
-    .box-imagens-imovel{
-        display: flex;
-        margin-top: 100px;
-        width: 100%;
-        max-height: 400px;
-        overflow: hidden;
-        transition: transform 0.5s ease-in-out;
-    }
-    .box-imagens-imovel img{
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        object-position: center;
-    }
+
 }

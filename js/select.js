@@ -1,27 +1,29 @@
-const sliderContainer = document.querySelector('.box-imagens-imovel');
-const images = document.querySelectorAll('.box-imagens-imovel img');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
+const imgs = document.getElementById("container-img");
+const img = document.querySelectorAll("#container-img img");
 
-let currentIndex = 0;
-let indexImg = 0;
+let idx = 0;
 
-function updateSliderPosition() {
-    const width = window.innerWidth / 3;
-    sliderContainer.style.transform = `translateX(${-width * currentIndex}px)`;
+function carrosel(){
+    idx++;
+    if (window.innerWidth <= 999 && window.innerWidth > 768) {
+        if(idx > img.length - 2){
+            idx = 0;
+        }
+        imgs.style.transform = `translateX(${-idx * (100 / 2)}vw)`;
+    } else if (window.innerWidth <= 768) {
+        if(idx > img.length - 1){
+            idx = 0;
+        }
+        imgs.style.transform = `translateX(${-idx * 100}vw)`;
+    }else{
+        if(idx > img.length - 3){
+            idx = 0;
+        }
+
+        imgs.style.transform = `translateX(${-idx * (100 / 3)}vw)`;
+    }
+    
+    window.addEventListener('resize', carrosel);
 }
 
-function showPrevImage() {
-    currentIndex = (currentIndex === 0) ? images.length - 3 : currentIndex - 1;
-    updateSliderPosition();
-}
-
-function showNextImage() {
-    currentIndex = (currentIndex === images.length - 3) ? 0 : currentIndex + 1;
-    updateSliderPosition();
-}
-
-prevButton.addEventListener('click', showPrevImage);
-nextButton.addEventListener('click', showNextImage);
-
-window.addEventListener('resize', updateSliderPosition);
+setInterval(carrosel, 2500);
