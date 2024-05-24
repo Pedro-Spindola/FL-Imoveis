@@ -6,13 +6,40 @@ app.use(express.json())
 const port = 3000
 mongoose.connect('mongodb+srv://Spindola:MongoDBSpindola@fl-imoveis-api.gxf24qe.mongodb.net/?retryWrites=true&w=majority&appName=fl-imoveis-api');
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+
+app.get('/', async (req, res) => {
+    const imovel = await Imovel.find();
+    return res.send(imovel)
+}) // Vai fazer a leitura de todos os meus imovel.
 
 app.listen(port, () => {
   console.log('App running...')
 })
+
+app.delete("/:id", async (req, res) => {
+    const imovel = await Imovel.findByIdAndDelete(req.params.id)
+    return res.send(imovel)
+}) // Para deletar um imovel
+
+app.put("/:id", async(req, res) =>{
+    const imovel = await Imovel.findByIdAndUpdate(req.params.id, {
+        titulo: req.body.titulo,
+        endereço: req.body.endereço,
+        bairro: req.body.bairro,
+        cod: req.body.cod,
+        area: req.body.area,
+        garagem: req.body.garagem,
+        quartos: req.body.quartos,
+        banheiros: req.body.banheiros,
+        descricao: req.body.descricao,
+        categoria: req.body.categoria,
+        imagem_url: {
+            imagem1: req.body.imagem_url.imagem1,
+            imagem2: req.body.imagem_url.imagem2
+        }
+    })
+    return res.send(imovel)
+}) // Faz o update do imovel
 
 const Imovel = mongoose.model('Imovel', { 
     titulo: String,
@@ -51,5 +78,5 @@ app.post("/", async (req, res) => {
     })
 
     await imovel.save()
-    res.send(imovel)
+    return res.send(imovel)
 })
