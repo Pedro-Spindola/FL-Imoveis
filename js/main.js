@@ -162,3 +162,65 @@ minArea.addEventListener('input', function() {
 maxArea.addEventListener('input', function() {
     this.value = this.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
 });
+
+
+///  COMEÇA AQUI O MEU DB
+document.addEventListener('DOMContentLoaded', function() {
+    fetchImoveis();
+});
+
+async function fetchImoveis() {
+    try {
+        const response = await fetch('http://localhost:3000/api/imoveis');
+        const imoveis = await response.json();
+
+        const container = document.querySelector('.box-grid-lancamentos');
+        container.innerHTML = '';
+
+        imoveis.forEach(imovel => {
+            const boxImovel = document.createElement('div');
+            boxImovel.classList.add('box-imovel');
+
+            boxImovel.innerHTML = `
+                <div class="box-imovel-imagem">
+                    <img class="imovel-imagem" src="${imovel.image}" alt="">
+                </div>
+                <div class="box-imovel-informacao">
+                    <div class="imovel-div-infomacao">
+                        <h4 class="imovel-tipo">${imovel.tipo}</h4>
+                        <h3 class="imovel-valor">R$ ${imovel.valor}</h3>
+                        <h4 class="imovel-endereco">${imovel.endereco}</h4>
+                        <h4 class="imovel-setor">${imovel.setor}</h4>
+                    </div>
+                    <div class="imovel-div-icones">
+                        <div class="icon-1 box-icone">
+                            <img class="icon-area icones" src="image/ruler.svg" alt="">
+                            <h5>${imovel.area}m²</h5>
+                        </div>
+                        <div class="icon-2 box-icone">
+                            <img class="icon-garagem icones" src="image/car.svg" alt="">
+                            <h5>${imovel.garagem}</h5>
+                        </div>
+                        <div class="icon-3 box-icone">
+                            <img class="icon-quartos icones" src="image/bed.svg" alt="">
+                            <h5>${imovel.quartos}</h5>
+                        </div>
+                        <div class="icon-4 box-icone">
+                            <img class="icon-wc icones" src="image/bath-solid.svg" alt="">
+                            <h5>${imovel.banheiros}</h5>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.appendChild(boxImovel);
+        });
+
+        // Reinicializa o slider
+        $('.box-grid-lancamentos').slick('refresh'); // Atualiza o slider
+
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+}
+
+  
